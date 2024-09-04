@@ -1,0 +1,3 @@
+
+class InvalidByteValue(ValueError):
+    pass
