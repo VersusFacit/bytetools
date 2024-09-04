@@ -1,4 +1,9 @@
-from bytetools.operations import lower
+import pytest
+
+from bytetools import (
+    InvalidByteValue,
+    lower,
+)
 
 
 class TestByteOperations:
@@ -15,3 +20,7 @@ class TestByteOperations:
         assert lower(test_array[6]) == 0x20
         assert lower(test_array[-1]) == 0x21
         assert lower(test_array[-2]) == 0x64
+
+    def test_lower_indexing_bytearrays(self):
+        with pytest.raises(InvalidByteValue):
+            lower(256)

@@ -1,4 +1,7 @@
-__pycache__/
 *.pyc
 *.pyo
 *.swp
+__pycache__/
+build/
+dist/
+src/bytetools.egg-info/
